@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:06:39 by dolifero          #+#    #+#             */
-/*   Updated: 2024/10/16 15:14:29 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:51:59 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
 
 class Bureaucrat
 {

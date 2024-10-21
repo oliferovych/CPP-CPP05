@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:06:11 by dolifero          #+#    #+#             */
-/*   Updated: 2024/10/16 15:28:41 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:01:22 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,37 +24,58 @@ int main(void)
 	Bureaucrat b8("b8", 149);
 	Bureaucrat b9("b9", 150);
 
-	try
-	{
-		b1.incrementGrade();
-	}
-	catch(const Bureaucrat::GradeTooLowException &e)
-	{
-		std::cerr << b1 << e.what() << '\n';
-	}
-	try
-	{
-		b2.decrementGrade();
-	}
-	catch(const Bureaucrat::GradeTooHighException &e)
-	{
-		std::cerr << b2 << e.what() << '\n';
-	}
-	try
-	{
-		b3.incrementGrade();
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << b3 << e.what() << '\n';
-	}
-	try
-	{
-		b4.decrementGrade();
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << b4 << e.what() << '\n';
-	}
-	std::cout << b1 << b2 << b3 << b4 << b5 << b6 << b7 << b8 << b9;
+    try {
+        b1.decrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << " " << b1 << '\n';
+    }
+
+    try {
+        b2.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << " " << b2 << '\n';
+    }
+
+    try {
+        b3.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    try {
+        b4.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    try {
+        b5.decrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << " " << b5 << '\n';
+    }
+
+    try {
+        b6.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << " " << b6 << '\n';
+    }
+
+    try {
+        b7.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    try {
+        b8.incrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    try {
+        b9.decrementGrade();
+    } catch(const std::exception &e) {
+        std::cerr << e.what() << " " << b9 << '\n';
+    }
+	return(0);
 }
