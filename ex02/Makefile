@@ -6,7 +6,7 @@
 #    By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 20:47:08 by dolifero          #+#    #+#              #
-#    Updated: 2024/11/05 17:47:37 by dolifero         ###   ########.fr        #
+#    Updated: 2024/11/05 18:31:44 by dolifero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f
 
-SRC_FILES	= Bureaucrat.cpp ShrubberyCreationForm.cpp AForm.cpp main.cpp
+SRC_FILES	= Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp main.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 all:		$(NAME)
