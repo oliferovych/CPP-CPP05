@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:06:11 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/06 15:50:22 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:04:58 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,8 @@ int main(void)
     b2.executeForm(*f2);
     b3.signForm(*f3);
     b3.executeForm(*f3);
+    delete f1;
+    delete f2;
+    delete f3;
 	return(0);
 }

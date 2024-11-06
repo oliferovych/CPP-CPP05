@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:34:35 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/06 15:51:53 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:13:35 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,17 @@ Intern &Intern::operator=(const Intern &other)
 	return *this;
 }
 
-AForm *Intern::makeShrubberyCreationForm(std::string target)
+AForm *makeShrubberyCreationForm(std::string target)
 {
 	return new ShrubberyCreationForm(target);
 }
 
-AForm *Intern::makeRobotomyRequestForm(std::string target)
+AForm *makeRobotomyRequestForm(std::string target)
 {
 	return new RobotomyRequestForm(target);
 }
 
-AForm *Intern::makePresidentialPardonForm(std::string target)
+AForm *makePresidentialPardonForm(std::string target)
 {
 	return new PresidentialPardonForm(target);
 }
@@ -50,7 +50,7 @@ AForm *Intern::makePresidentialPardonForm(std::string target)
 AForm *Intern::makeForm(std::string name, std::string target)
 {
 	std::string names[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-	AForm *(Intern::*functions[3])(std::string) = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
+	AForm *(*functions[3])(std::string) = {makeShrubberyCreationForm, makeRobotomyRequestForm, makePresidentialPardonForm};
 	for(int i = 0; name[i]; i++)
 		name[i] = std::tolower(name[i]);
 	for (int i = 0; i < 3; i++)
@@ -58,7 +58,7 @@ AForm *Intern::makeForm(std::string name, std::string target)
 		if (name == names[i])
 		{
 			std::cout << "Intern creates " << name << std::endl;
-			return (this->*functions[i])(target);
+			return functions[i](target);
 		}
 	}
 	std::cerr << "Form " << name << " not found" << std::endl;

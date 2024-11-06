@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:31:17 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/06 15:49:27 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:14:18 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ class Intern
 		~Intern();
 		// Member functions
 		AForm *makeForm(std::string name, std::string target);
-		AForm *makeShrubberyCreationForm(std::string target);
-		AForm *makeRobotomyRequestForm(std::string target);
-		AForm *makePresidentialPardonForm(std::string target);
 };
 
 #endif
